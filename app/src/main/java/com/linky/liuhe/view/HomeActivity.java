@@ -249,6 +249,7 @@ public class HomeActivity extends AppCompatActivity
 
             } else {
 
+                position -= 3;
                 MyViewHolder holder = (MyViewHolder) viewHolder;
                 holder.mTvSeason.setText(String.format("期数：%s", mDatas.get(position).season));
                 holder.mTvDate.setText(String.format("时间：%s", mDatas.get(position).getOpenTime()));
@@ -430,7 +431,7 @@ public class HomeActivity extends AppCompatActivity
 
         @Override
         public int getItemCount() {
-            return mDatas.size();
+            return mDatas.size() + 3;
         }
 
         class MyNumberHolder extends RecyclerView.ViewHolder {
